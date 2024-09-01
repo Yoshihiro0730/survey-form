@@ -43,7 +43,8 @@ const ConfirmResults = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [rows, setRows] = useState<RowsProperties[]>([]);
 
-    const endPoint = `${process.env.REACT_APP_POST_API}/getResults.php`;
+    // const endPoint = `${process.env.REACT_APP_POST_API}/getResults.php`;
+    const endPoint = 'https://challenge-netsu.sakura.ne.jp/php/getResults.php';
 
     const userHandler = (event: ChangeEvent<HTMLInputElement>) => {
         const { name, value } = event.target;

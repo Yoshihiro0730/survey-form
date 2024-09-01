@@ -34,7 +34,8 @@ const Form = () => {
     const [addInfo, setAddInfo] = useState("");
     // const [name, setName] = useState("");
     const [submit, setSubmit] = useState(false);
-    const req_url = `${process.env.REACT_APP_POST_API}/post.php`;
+    // const req_url = `${process.env.REACT_APP_POST_API}/post.php`;
+    const req_url = 'https://challenge-netsu.sakura.ne.jp/php/post.php';
     const formHandler = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement> | SelectChangeEvent) => {
         const { name, value } = event.target;
         setUserData(prevState => ({
