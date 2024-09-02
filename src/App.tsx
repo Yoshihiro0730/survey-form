@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Form from './components/Form';
 import ConfirmResults from './components/ConfirmResults';
+import Graph from './components/Graph';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       </header>
       <Form />
       <ConfirmResults />
+      <Graph />
     </div>
   );
 }

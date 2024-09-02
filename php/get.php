@@ -7,23 +7,24 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-// レスポンス内容を変数に格納
-$name = $_GET["name"];
-$email = $_GET["email"];
-$age = $_age("age");
-ini_set('display_errors', 'On'); // エラーを表示させるようにしてください
-error_reporting(E_ALL); // 全てのレベルのエラーを表示してください
+// Jsonファイルを読み込む
+$files = glob("results/*.json");
+$results = [];
+
+try{
+    for ($count=0; $count < count($files); $count++) {
+        $target_file = $files[$count];
+        $texts = file_get_contents($target_file);
+        $file_content = json_decode($texts, true);
+        if($file_content !== null){
+            $results[] = $file_content; 
+        } else {
+            throw new Exception("JSONファイルのデコード処理に失敗しました。" . json_last_error_msg);
+        }
+    } 
+} catch (Exception $e) {
+    echo "エラーが発生しました。" . $e->getMessage();
+    exit;
+}
+echo json_encode($results);
 ?>
-<html>
-<head>
-<meta charset="utf-8">
-<title>GET練習（受信）</title>
-</head>
-<body>
-お名前：<?= $name?> 
-Mail：<?= $mail?> 
-<ul>
-<li><a href="index.php">index.php</a></li>
-</ul>
-</body>
-</html>
