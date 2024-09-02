@@ -1,46 +1,43 @@
-# Getting Started with Create React App
+# ①課題番号-プロダクト名
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+娯楽調査
 
-## Available Scripts
+## ②課題内容（どんな作品か）
 
-In the project directory, you can run:
+- 娯楽について簡単なアンケートで答える形式
+- 名前とメールアドレスで登録したアンケート結果を確認することができる
 
-### `npm start`
+## ③DEMO
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+https://challenge-netsu.sakura.ne.jp/build/
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## ④作ったアプリケーション用のIDまたはPasswordがある場合
 
-### `npm test`
+- ID: なし
+- PW: なし
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ⑤工夫した点・こだわった点
 
-### `npm run build`
+- フロント/バックエンドを分けて実装
+- material UI でモダンなフォーム実装
+- DB使えるかわからなかったので、サーバにアンケート結果をjsonで置き、
+　結果確認関数をphpで作成し、描画するように実装
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ⑥難しかった点・次回トライしたいこと(又は機能)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- phpの書き方に慣れていなくて、バックエンド側に時間がかかった
+- フロントで処理しやすいようにレスポンスを調整するのに苦戦した
+- グラフ描画を実装したかったが、デプロイ時にエラーが出てしまい間に合わなかった
+- デプロイしても問題なく、グラフを描画できるように挑戦したい
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ⑦質問・疑問・感想、シェアしたいこと等なんでも
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [質問]
+- [感想] php書き慣れていなく、苦戦したが書いているうちに書きやすいことを実感した。
+　　　　　まだ、pythonの方が書きやすいがバックエンドでphpも需要が高いので引き続き学習に励みたい。
+- [参考記事]
+  - 1. https://qiita.com/tyatya_maruko/items/e8bceb8f3609f45fee1e
+  - 2. https://blog1.nkstudio.jp/next-js-react-hook-form%E3%81%A8%E7%B4%A0%E3%81%AEphp%E3%81%A7%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%92%E9%80%81%E3%82%8B/
+  - 3. https://www.yoheim.net/blog.php?q=20190703
+  - 4. https://stray-light.info/wp/post-597/#toc2
+  - 5. https://fwywd.com/tech/react-chartjs-2
